@@ -13,6 +13,7 @@ module.exports = merge(common, {
   devServer: {
     static: './public',
     hot: true,
+    historyApiFallback: true,
     proxy: {},
   },
 })
