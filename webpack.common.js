@@ -9,6 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     assetModuleFilename: 'static/media/[name].[hash][ext]',
   },
   module: {
