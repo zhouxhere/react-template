@@ -11,7 +11,9 @@ module.exports = merge(common, {
   },
   plugins: [new CaseSensitivePathsWebpackPlugin()],
   devServer: {
-    static: './public',
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
     hot: true,
     historyApiFallback: true,
     proxy: {},
