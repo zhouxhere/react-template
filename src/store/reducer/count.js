@@ -1,15 +1,15 @@
 import { storeTool } from '../../util/store'
 
-const addCount = (countState) => {
-  return countState + 1
+const addCount = (state) => {
+  return state + 1
 }
 
-const setCount = (countState, param) => {
+const setCount = (state, param) => {
   return param
 }
 
-const delCount = (countState) => {
-  return countState <= 0 ? 0 : countState - 1
+const delCount = (state) => {
+  return state <= 0 ? 0 : state - 1
 }
 
 const countReducer = storeTool.createReducer(0, {

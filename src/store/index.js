@@ -2,11 +2,11 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import storageEnhancer from './enhancer/storage'
 import loggerMiddleware from './middleware/logger'
+import appReducer from './reducer/app'
 import countReducer from './reducer/count'
-import todoReducer from './reducer/todo'
 
 const reducer = combineReducers({
-  todo: todoReducer,
+  app: appReducer,
   count: countReducer,
 })
 const middlewareEnhancer = applyMiddleware(loggerMiddleware, thunk)
