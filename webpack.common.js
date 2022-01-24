@@ -85,40 +85,40 @@ module.exports = {
           require.resolve('postcss-loader'),
         ],
       },
-      {
-        test: /\.less$/,
-        exclude: /\.module\.less$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 3,
-              modules: {
-                mode: 'icss',
-              },
-            },
-          },
-          require.resolve('postcss-loader'),
-          require.resolve('less-loader'),
-        ],
-        sideEffects: true,
-      },
-      {
-        test: /\.module\.less$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 3,
-              modules: true,
-            },
-          },
-          require.resolve('postcss-loader'),
-          require.resolve('less-loader'),
-        ],
-      },
+      // {
+      //   test: /\.less$/,
+      //   exclude: /\.module\.less$/,
+      //   use: [
+      //     require.resolve('style-loader'),
+      //     {
+      //       loader: require.resolve('css-loader'),
+      //       options: {
+      //         importLoaders: 3,
+      //         modules: {
+      //           mode: 'icss',
+      //         },
+      //       },
+      //     },
+      //     require.resolve('postcss-loader'),
+      //     require.resolve('less-loader'),
+      //   ],
+      //   sideEffects: true,
+      // },
+      // {
+      //   test: /\.module\.less$/,
+      //   use: [
+      //     require.resolve('style-loader'),
+      //     {
+      //       loader: require.resolve('css-loader'),
+      //       options: {
+      //         importLoaders: 3,
+      //         modules: true,
+      //       },
+      //     },
+      //     require.resolve('postcss-loader'),
+      //     require.resolve('less-loader'),
+      //   ],
+      // },
     ],
   },
   resolve: {
