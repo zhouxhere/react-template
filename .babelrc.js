@@ -13,5 +13,13 @@ module.exports = {
     ],
     ['@babel/preset-react', { useBuiltIns: true }],
   ],
-  plugins: [],
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        style: true,
+      },
+    ],
+  ],
 }

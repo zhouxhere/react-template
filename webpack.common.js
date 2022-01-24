@@ -100,7 +100,14 @@ module.exports = {
             },
           },
           require.resolve('postcss-loader'),
-          require.resolve('less-loader'),
+          {
+            loader: require.resolve('less-loader'),
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
         ],
         sideEffects: true,
       },
@@ -116,7 +123,14 @@ module.exports = {
             },
           },
           require.resolve('postcss-loader'),
-          require.resolve('less-loader'),
+          {
+            loader: require.resolve('less-loader'),
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
         ],
       },
     ],

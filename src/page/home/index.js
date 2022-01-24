@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 
@@ -15,8 +16,8 @@ const Home = () => {
   return (
     <div>
       <h3>home page</h3>
-      <button onClick={addCount}>add</button>
-      <button onClick={delCount}>del</button>
+      <Button onClick={addCount}>add</Button>
+      <Button onClick={delCount}>del</Button>
     </div>
   )
 }
