@@ -4,12 +4,12 @@ module.exports = {
   name: 'app',
   urls: {
     loginUrl: '/passport/login',
-    defaultUrl: '/home/index',
+    defaultUrl: '/map',
   },
   redirects: [
     {
       from: RouteCode.ROOT,
-      to: RouteCode.PAGE_HOME,
+      to: RouteCode.PAGE_MAP,
     },
   ],
 }

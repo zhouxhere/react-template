@@ -15,6 +15,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
   plugins: ['@babel', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'no-unused-vars': 'warn',
+    'prettier/prettier': 'warn',
   },
 }

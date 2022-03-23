@@ -79,7 +79,10 @@ module.exports = {
             loader: require.resolve('css-loader'),
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                auto: true,
+                localIdentName: '[name]__[hash:base64:8]',
+              },
             },
           },
           require.resolve('postcss-loader'),
@@ -112,7 +115,10 @@ module.exports = {
             loader: require.resolve('css-loader'),
             options: {
               importLoaders: 3,
-              modules: true,
+              modules: {
+                auto: true,
+                localIdentName: '[local]__[hash:base64:8]',
+              },
             },
           },
           require.resolve('postcss-loader'),
@@ -139,7 +145,13 @@ module.exports = {
     ],
     alias: {
       'react-native': 'react-native-web',
-      src: path.resolve(__dirname, 'src'),
+      src: path.resolve(__dirname, 'src/'),
+      config: path.resolve(__dirname, 'src/config'),
+      layout: path.resolve(__dirname, 'src/layout'),
+      page: path.resolve(__dirname, 'src/page'),
+      router: path.resolve(__dirname, 'src/router'),
+      store: path.resolve(__dirname, 'src/store'),
+      util: path.resolve(__dirname, 'src/util'),
     },
   },
   plugins: [

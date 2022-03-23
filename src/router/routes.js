@@ -21,6 +21,12 @@ export const defaultRoutes = [
           },
         ],
       },
+      {
+        code: RouteCode.PAGE_MAP,
+        title: 'map',
+        path: 'map',
+        component: RoutePath.PAGE_MAP,
+      },
     ],
   },
 ]

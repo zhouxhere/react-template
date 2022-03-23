@@ -4,9 +4,11 @@ import { generatePath, useMatch, useNavigate } from 'react-router-dom'
 
 const Redirect = (props) => {
   const match = useMatch(props.redirect)
+  const isFrom = useMatch(props.from)
   const navigate = useNavigate()
   useEffect(() => {
-    if (props.redirect) {
+    console.log(props)
+    if (props.redirect && isFrom) {
       if (match) {
         navigate(generatePath(props.redirect, match.params))
       } else {

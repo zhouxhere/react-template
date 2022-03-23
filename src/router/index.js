@@ -12,13 +12,16 @@ const Router = () => {
   const processRoutes = (params) => {
     if (!params) return []
     let allRedirects = routerTool.processRoutes(defaultRoutes, redirects)
+    console.log(allRedirects)
     let routes = params.map((item) => {
       let Component = lazy(() => import(`src/${item.component}`))
       let redirect = allRedirects.find((p) => p.from === item.code)
       let props = {
         element: (
           <Suspense fallback={<div>loading</div>}>
-            <Redirect redirect={redirect ? redirect.toUrl : ''}>
+            <Redirect
+              redirect={redirect ? redirect.toUrl : ''}
+              from={redirect ? redirect.fromUrl : ''}>
               <Component />
             </Redirect>
           </Suspense>
